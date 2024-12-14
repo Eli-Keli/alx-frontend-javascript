@@ -44,3 +44,13 @@ console.log(director);
 // lastName: "Doe"
 // location: "London"
 // numberOfReports: 17
+
+interface printTeacherFunction {
+    (firstName: string, lastName: string): string;
+}
+
+function printTeacher(firstName: string, lastName: string): string {
+    return `${firstName.charAt(0)}. ${lastName}`; // returns the first initial of the first name and the full last name
+}
+
+console.log(printTeacher('John', 'Doe')); // should print "J. Doe"
