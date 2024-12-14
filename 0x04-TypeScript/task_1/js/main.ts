@@ -7,6 +7,10 @@ interface Teacher {
     [key: string]: any; // Allows for any other properties to be added to the object
 }
 
+interface Directors extends Teacher {
+    numberOfReports: number;
+}
+
 const teacher: Teacher = {
     firstName: 'John',
     fullTimeEmployee: false,
@@ -23,3 +27,20 @@ console.log(teacher);
 // fullTimeEmployee: false
 // lastName: "Doe"
 // location: "London"
+
+const director: Directors = {
+    firstName: 'Jane',
+    lastName: 'Doe',
+    fullTimeEmployee: true,
+    location: 'London',
+    numberOfReports: 17,
+};
+
+console.log(director);
+// should print
+// Object
+// firstName: "Jane"
+// fullTimeEmployee: true
+// lastName: "Doe"
+// location: "London"
+// numberOfReports: 17
